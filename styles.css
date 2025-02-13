@@ -1,0 +1,120 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
+    background-color: pink;
+}
+
+.container {
+    border: 2px solid palevioletred;
+    background-color: aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.message {
+    padding: 40px;
+    max-width: 50vw;
+    text-align: center;
+    font-size: 20px;
+}
+
+.paksaan {
+    z-index: -1;
+}
+
+button {
+    z-index: 10;
+    padding: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: none;   
+    border-radius: 20px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yes:hover {
+    transform: scale(1.4);
+    box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.3);
+    background-color: red;
+    color: white;
+}
+
+.no:hover {
+    transform: scale(0.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.yes:active {
+    transform: scale(0.9);
+}
+
+img {
+    z-index: -1;
+    max-width: 10vw;
+    height: auto;
+    position: absolute;
+}
+
+.heart {
+    z-index: 5;
+    position: absolute;
+    animation: floatUp 2s ease-out forwards;
+}
+
+.fadeOut {
+    animation: fadeOutEffect 2s ease-out forwards;
+}
+
+.fadeIn {
+    animation: fadeInEffect 2s ease-out forwards;
+}
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+}
+
+@keyframes fadeOutEffect {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInEffect {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
