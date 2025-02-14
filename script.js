@@ -91,9 +91,11 @@ document.addEventListener("DOMContentLoaded", () => {
     
     function spawnHearts(){
         for (let i = 0; i < 3; i++){
-            const heart = document.createElement("div");
-            heart.innerText = "❤️";
+            const heart = document.createElement("img");
             heart.classList.add("heart");
+
+            heart.src = ("heart.png");
+            heart.style.width = "15px";
             
             const x = (Math.random() - 0.5) * 50;
             const y = (Math.random() - 0.5) * 50;
